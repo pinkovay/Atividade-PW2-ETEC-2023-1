@@ -1,0 +1,17 @@
+{
+  "name": "atvpw2",
+  "version": "1.0.0",
+  "description": "Atividade de PW2 - API REQUEST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "PW2",
+    "API",
+    "REQUEST",
+    "ETEC"
+  ],
+  "author": "Pedro Pinkovay",
+  "license": "ISC"
+}
