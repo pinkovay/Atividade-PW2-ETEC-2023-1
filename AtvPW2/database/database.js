@@ -12,7 +12,8 @@ const connection = new sequelize(
         host: "localhost",
         porta: "3306",
         dialect: "mysql",
-        timezone: "-03:00" // Fuso horário local
+        timezone: "-03:00", // Fuso horário local
+        logging: false // Usei isso para que as mensagens possam ser vistas mais claramente no terminal;
     }  // Objeto JSON com dados para configuração.
 ) 
 

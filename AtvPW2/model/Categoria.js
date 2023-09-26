@@ -11,10 +11,11 @@ const Categoria = connection.define(
     'tbl_categoria', // Tabela em especifico que desejo;
     {
         codigo_categoria:{
-            type: sequelize.INTEGER.UNSIGNED,
+            type: sequelize.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
+        
         nome_categoria:{
             type: sequelize.STRING(255),
             allowNull: false

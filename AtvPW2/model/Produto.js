@@ -9,7 +9,7 @@ const Produto = connection.define(
         codigo_produto:{
             type: sequelize.INTEGER.UNSIGNED,
             autoIncrement: true,
-            primarykey: true
+            primaryKey: true
         },
         // Aqui seria interessante criar um FK;
         nome_produto:{
