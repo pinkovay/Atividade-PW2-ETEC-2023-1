@@ -23,8 +23,6 @@ const produtoController = require("./controller/ProdutoController")
 app.use("/", produtoController)
 
 // Rota padrão
-
-// Rota raiz
 app.get('/', (req, res) => {
     res.send('Página inicial');
 });
