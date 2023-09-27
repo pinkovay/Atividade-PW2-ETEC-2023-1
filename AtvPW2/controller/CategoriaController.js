@@ -49,8 +49,36 @@ router.get('/categoria/listarCategoria', (req, res) => {
         })
 });
 
-router.put('/categoria/alterarCategoria', (req, res) => {
-    res.send('Categoria alterada com sucesso.');
+router.put('/categoria/alterarCategoria/:id', (req, res) => {
+    
+    categoriaModel.update({
+        nome_categoria: req.body.nome_categoria,
+        observacoes_categoria: req.body.observacoes_categoria,
+    },
+        { where: {
+            codigo_categoria: req.params.id,
+        },
+    })
+    .then((categoriaModel) => {
+        if (!categoriaModel){
+            return res.status(404).json({
+                errorStatus: true,
+                messageStatus: `Categoria de código ${id} não encontrada`
+            })
+        }
+    })
+    .then(() =>{
+        return res.status(201).json({
+            errorStatus: false,
+            messageStatus: "Categoria atualizada com sucesso"
+        })
+    })
+    .catch((error) =>{
+        return res.status(500).json({
+            errorStatus: true,
+            messageStatus: error
+        })
+    })
 });
 
 router.delete('/categoria/excluirCategoria/:id', (req, res) => {

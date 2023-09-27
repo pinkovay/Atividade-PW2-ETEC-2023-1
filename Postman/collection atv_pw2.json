@@ -36,7 +36,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome_categoria\": \"Tênis\",\r\n    \"observacoes_categoria\": \"não sei\"\r\n}",
+							"raw": "{\r\n    \"nome_categoria\": \"Bolsa\",\r\n    \"observacoes_categoria\": \"não sei\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -63,8 +63,17 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_categoria\": \"Bolsa escolar\",\r\n    \"observacoes_categoria\": \"Bolsa para estudo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3000/categoria/alterarCategoria",
+							"raw": "http://localhost:3000/categoria/alterarCategoria/11",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -72,7 +81,8 @@
 							"port": "3000",
 							"path": [
 								"categoria",
-								"alterarCategoria"
+								"alterarCategoria",
+								"11"
 							]
 						}
 					},
@@ -83,8 +93,17 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3000/categoria/excluirCategoria",
+							"raw": "http://localhost:3000/categoria/excluirCategoria/10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -92,7 +111,8 @@
 							"port": "3000",
 							"path": [
 								"categoria",
-								"excluirCategoria"
+								"excluirCategoria",
+								"10"
 							]
 						}
 					},
@@ -128,6 +148,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_produto\": \"X6\",\r\n    \"valor_produto\": 27.88,\r\n    \"imagem_produto\": \"sem imagem\",\r\n    \"descricao_produto\": \"BMW\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:3000/produto/cadastrarProduto",
 							"protocol": "http",
@@ -148,8 +177,17 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_produto\": \"Calça\",\r\n    \"valor_produto\": 20.80,\r\n    \"imagem_produto\": \"sei imagem\",\r\n    \"descricao_produto\": \"Calça preta da nike GG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3000/produto/alterarProduto",
+							"raw": "http://localhost:3000/produto/alterarProduto/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -157,7 +195,8 @@
 							"port": "3000",
 							"path": [
 								"produto",
-								"alterarProduto"
+								"alterarProduto",
+								"1"
 							]
 						}
 					},
@@ -169,7 +208,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/produto/excluirProduto",
+							"raw": "http://localhost:3000/produto/excluirProduto/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -177,7 +216,8 @@
 							"port": "3000",
 							"path": [
 								"produto",
-								"excluirProduto"
+								"excluirProduto",
+								"2"
 							]
 						}
 					},
