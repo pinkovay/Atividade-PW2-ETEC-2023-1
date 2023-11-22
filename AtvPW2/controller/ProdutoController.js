@@ -1,11 +1,16 @@
-// Criar rotas especificadas
-
 // Importando o express;
-const express = require("express")
-// Importando o representante da tabela Categoria;
+const express = require("express") // Importando o representante da tabela Categoria;
 const produtoModel = require("../model/Produto")
-// Router
 const router = express.Router()
+
+
+
+const {initializeApp} = require('firebase/app');
+const firebaseConfig = require('../config/firebaseConfig')
+const firebaseApp = initializeApp(firebaseConfig);
+
+
+// TODO: Continuar configuração do firebase
 
 // ROTAS
 router.post('/produto/cadastrarProduto', (req, res) => {
