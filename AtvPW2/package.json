@@ -4,7 +4,8 @@
   "description": "Atividade de PW2 - API REQUEST",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "postinstall": "node setup.js"
   },
   "keywords": [
     "PW2",
